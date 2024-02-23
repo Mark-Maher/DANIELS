@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --main-color: #343434;
+  --sec-color: #fff;
+  --back-color: #f7f7f7;
+  --p-color: #748182;
+}
+.navbar {
+  transition: all 0.5s;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+.navbar-scrolled {
+  background-color: black !important;
+  color: #1c1c1c !important;
+}
+#home {
+  background-image: url(../imgs/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 6em;
+}
+#home .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* .home-social {
+  max-width: 360px;
+} */
+#home span {
+  font-size: 18px;
+  padding: 6px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  margin: 3px;
+
+  background: rgba(0, 0, 0, 0.3);
+}
+#home span:hover {
+  background: white !important;
+}
+#home span:hover i {
+  color: #1c1c1c !important;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item .nav-link.active::after {
+  width: 80%;
+}
+.nav-item:not(:has(.nav-link.active))::after {
+  width: 0;
+}
+.nav-item .nav-link {
+  position: relative;
+  width: fit-content;
+}
+.nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 12%;
+  width: 0%;
+  height: 2px;
+  background-color: var(--sec-color);
+  transition: all 0.5s;
+}
+.nav-item .nav-link:hover::after {
+  width: 80%;
+}
+
+.home-content p::after {
+  content: "";
+  color: #ffffff;
+  animation: wordMover 10s infinite linear;
+  font-weight: 400;
+}
+@keyframes wordMover {
+  0% {
+    content: " designer|";
+  }
+  3% {
+    content: " designe|";
+  }
+  6% {
+    content: " design|";
+  }
+  9% {
+    content: " desig|";
+  }
+  12% {
+    content: " desi|";
+  }
+  15% {
+    content: " des|";
+  }
+  18% {
+    content: " de|";
+  }
+  21% {
+    content: " d|";
+  }
+  24% {
+    content: " |";
+  }
+  27% {
+    content: " d|";
+  }
+  30% {
+    content: " de|";
+  }
+  33% {
+    content: " dev|";
+  }
+  34% {
+    content: " deve|";
+  }
+  37% {
+    content: " devel|";
+  }
+  40% {
+    content: " develo|";
+  }
+  43% {
+    content: " develop|";
+  }
+  46% {
+    content: " develope|";
+  }
+  49% {
+    content: " developer|";
+  }
+  52% {
+    content: " develope|";
+  }
+  55% {
+    content: " develop|";
+  }
+  58% {
+    content: " develo|";
+  }
+  61% {
+    content: " devel|";
+  }
+  64% {
+    content: " deve|";
+  }
+  67% {
+    content: " dev|";
+  }
+  70% {
+    content: " de|";
+  }
+  73% {
+    content: " d|";
+  }
+  76% {
+    content: " |";
+  }
+  79% {
+    content: " d|";
+  }
+  82% {
+    content: " de|";
+  }
+  85% {
+    content: " des|";
+  }
+  88% {
+    content: " desi|";
+  }
+  91% {
+    content: " desig|";
+  }
+  94% {
+    content: " design|";
+  }
+  97% {
+    content: " designe|";
+  }
+  99% {
+    content: " designer|";
+  }
+}
+#about {
+  padding: 4em 0em;
+}
+.hero-image::after {
+  content: "";
+  width: 53%;
+  height: 78%;
+  position: absolute;
+  left: 50px;
+  bottom: -30px;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+#about p {
+  color: var(--p-color);
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 15px;
+}
+#about h3 {
+  color: var(--main-color);
+  font-weight: 800;
+}
+
+.download:hover {
+  background-color: white;
+  color: black;
+}
+
+#services {
+  background-color: var(--back-color);
+  padding: 6em 0em;
+}
+#services h3 {
+  font-weight: 900 !important;
+  color: var(--main-color);
+  position: relative;
+}
+#services h3:after {
+  content: "";
+  width: 15%;
+  height: 15px;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 43%;
+}
+#services h6 {
+  color: var(--main-color);
+  font-weight: 800;
+  font-size: 18px;
+}
+#services p {
+  color: var(--p-color);
+  line-height: 22.4px;
+  font-size: 14px;
+  font-weight: 400;
+}
+#services span {
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  padding: 1.5em;
+  transition: all 0.5s;
+}
+#services .card:hover span {
+  background-color: #1c1c1c;
+  color: var(--sec-color);
+}
+#services .card {
+  border-color: var(--sec-color) !important;
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+#works {
+  padding: 6em 0em;
+}
+#works h3 {
+  font-weight: 900 !important;
+  color: var(--main-color);
+  position: relative;
+  margin-bottom: 1.5em !important;
+}
+#works h3:after {
+  content: "";
+  width: 15%;
+  height: 15px;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 43%;
+}
+.nav-pills .nav-link {
+  border-radius: 0 !important;
+  position: relative;
+  width: fit-content;
+  margin-bottom: 2em;
+}
+.nav-pills .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--main-color);
+  top: 90%;
+  left: 20%;
+}
+.nav-pills .nav-link:hover::after {
+  width: 60% !important;
+}
+.nav-pills .nav-link.active {
+  background-color: transparent;
+}
+.nav-pills .nav-link.active::after {
+  width: 60% !important;
+}
+
+#works .overlay {
+  top: 100%;
+  display: none;
+  transition: all 0.5s;
+}
+#works .over:hover .overlay {
+  top: 0;
+  display: block;
+}
+#works .overlay span {
+  padding: 0.5em;
+  transition: all 0.3s;
+}
+#works .overlay span:hover {
+  background-color: var(--back-color) !important;
+  border: black 1px solid;
+}
+#works .overlay span:hover i {
+  color: black !important;
+}
+.modal-header {
+  border-bottom: 0px !important;
+}
+.modal-body {
+  padding: 0 !important;
+}
+.modal-dialog {
+  max-width: 50% !important;
+}
+#works .carousel span:hover {
+  background-color: transparent !important;
+}
+.fade:has(.show) {
+  display: block !important;
+  opacity: 1 !important;
+}
+#clients {
+  background-color: var(--back-color);
+  padding: 2em;
+}
+#clients h3 {
+  font-weight: 900 !important;
+  color: var(--main-color);
+  position: relative;
+  margin-bottom: 1.5em !important;
+}
+#clients h3:after {
+  content: "";
+  width: 15%;
+  height: 15px;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 43%;
+}
+#works .overlay {
+  height: 95% !important;
+  width: 90% !important;
+  margin-top: 0.5em;
+}
+#clients {
+  text-align: center;
+}
+#clients img {
+  width: 5%;
+  border-radius: 50%;
+  margin-bottom: 2em !important;
+  margin: auto;
+}
+#clients p {
+  color: #748182;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 1em;
+}
+#clients h6 {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+}
+#clients span {
+  color: #212529;
+  font-size: 16px;
+  font-weight: 400;
+}
+.carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  margin-right: 0.8em !important;
+  background: #869791 !important;
+  border-radius: 50% !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+.numbers {
+  padding: 6em 0em;
+}
+.numbers i {
+  color: var(--main-color);
+  font-size: 30px;
+}
+.numbers h3 {
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: 900;
+  padding: 0.6em 0em;
+  font-family: "Montserrat", sans-serif;
+}
+.numbers p {
+  color: #748182;
+  font-size: 15px;
+  font-weight: 600;
+}
+#team {
+  background-color: var(--back-color);
+  padding: 4em 0em;
+}
+#team h3 {
+  font-weight: 900 !important;
+  color: var(--main-color);
+  position: relative;
+  margin-bottom: 1.5em !important;
+}
+#team h3:after {
+  content: "";
+  width: 15%;
+  height: 15px;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 43%;
+}
+.navbar-scrolled {
+  background-color: black !important;
+  color: #1c1c1c !important;
+}
+.overlay2 {
+  top: -1px;
+  left: 10px;
+  background-color: var(--back-color);
+  opacity: 0;
+  transform: rotateY(180deg) scale(0);
+  transition: all 0.7s;
+  height: 96% !important;
+  width: 95% !important;
+  margin-top: 0.5em;
+}
+#team img {
+  transition: all 0.7s;
+}
+#team .card:hover .overlay2 {
+  opacity: 1;
+  transform: rotateY(0deg) scale(1, 1);
+}
+#team .card:hover img {
+  transform: scale(1.2);
+}
+#team span {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 0.6em;
+  margin: 0.4em;
+  border-radius: 50%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#team span:hover {
+  background-color: white;
+  color: black;
+}
+#contact {
+  padding: 4em 0em;
+}
+#contact h3 {
+  font-weight: 900 !important;
+  color: var(--main-color);
+  position: relative;
+  margin-bottom: 2em !important;
+}
+#contact h3:after {
+  content: "";
+  width: 15%;
+  height: 15px;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 43%;
+}
+#contact span {
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  padding: 1.6em;
+  transition: all 0.5s;
+  margin-bottom: 2em !important;
+}
+#contact span i {
+  font-size: 1.5em;
+}
+#contact span:hover {
+  background-color: #1c1c1c;
+  color: var(--sec-color);
+}
+#contact h6 {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 2.5em 0em 1em 0em;
+}
+#contact p {
+  color: var(--p-color);
+  font-size: 15px;
+  font-weight: 400;
+}
+#contact input,
+textarea {
+  background-color: #f4f4f4 !important;
+}
+#contact button {
+  transition: all 0.2s;
+}
+#contact button:hover {
+  background: transparent !important;
+  color: #343434 !important;
+}
+#footer {
+  background-color: #1c1c1c;
+}
+#footer p {
+  color: var(--p-color);
+  font-weight: 400;
+}
